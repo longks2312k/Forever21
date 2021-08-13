@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, TextInput, StyleSheet, TouchableOpacity, StatusBar,SafeAreaView, ScrollView, Image, Dimensions } from 'react-native'
+import { View, Text, TextInput, StyleSheet, TouchableOpacity,SafeAreaViewBase, StatusBar,SafeAreaView, ScrollView, Image, Dimensions } from 'react-native'
 import RnIcon from 'react-native-vector-icons/Ionicons';
 
 const DATA = [
@@ -14,7 +14,7 @@ const DATA = [
 export default function YourBag() {
     return (
         <View style={{flex: 1}}>
-            <SafeAreaView>
+            <ScrollView style={{flex: 1}}>
                 <Text style={{ fontSize: 22, marginVertical:5,marginLeft:15}}>Tshirt BlackWinter</Text>
                 <View style={{marginBottom: 10}}>
                     <View style={{ flexDirection: 'row'}}>
@@ -101,26 +101,26 @@ export default function YourBag() {
                         </View>
                     </View>
                 </View>
-            </SafeAreaView>
+            </ScrollView>
             <View style={{height:60,flexDirection:'row', justifyContent:'center',alignItems:'center',}}>
                 <TouchableOpacity style={{flex:1, justifyContent:'center',alignItems:'center',}}>
-                    <RnIcon name="home-outline" size={30} color="black"/>
+                    <RnIcon name="home-outline" size={25} color="black"/>
                     <Text>Home</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={{flex:1, justifyContent:'center',alignItems:'center',}}>
-                    <RnIcon name="list-outline" size={30} color="black"/>
+                    <RnIcon name="list-outline" size={25} color="black"/>
                     <Text>Shop</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={{flex:1, justifyContent:'center',alignItems:'center',}}>
-                    <RnIcon name="heart-outline" size={30} color="black"/>
+                    <RnIcon name="heart-outline" size={25} color="black"/>
                     <Text>Wishlist</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={{flex:1, justifyContent:'center',alignItems:'center',}}>
-                    <RnIcon name="cart-outline" size={30} color="black"/>
+                    <RnIcon name="cart-outline" size={25} color="black"/>
                     <Text>Bag</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={{flex:1, justifyContent:'center',alignItems:'center',}}>
-                    <RnIcon name="person-outline" size={30} color="black"/>
+                    <RnIcon name="person-outline" size={25} color="black"/>
                     <Text>Account</Text>
                 </TouchableOpacity>
             </View>

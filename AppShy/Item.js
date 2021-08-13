@@ -96,23 +96,23 @@ export default class SwiperItem extends Component {
                 </TouchableOpacity>
                 <View style={{height:60,flexDirection:'row', justifyContent:'center',alignItems:'center',}}>
                     <TouchableOpacity style={{flex:1, justifyContent:'center',alignItems:'center',}}>
-                        <RnIcon name="home-outline" size={30} color="black"/>
+                        <RnIcon name="home-outline" size={25} color="black"/>
                         <Text>Home</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={{flex:1, justifyContent:'center',alignItems:'center',}}>
-                        <RnIcon name="search-outline" size={30} color="black"/>
+                        <RnIcon name="search-outline" size={25} color="black"/>
                         <Text>Shop</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={{flex:1, justifyContent:'center',alignItems:'center',}}>
-                        <RnIcon name="heart-outline" size={30} color="black"/>
+                        <RnIcon name="heart-outline" size={25} color="black"/>
                         <Text>Wishlist</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={{flex:1, justifyContent:'center',alignItems:'center',}}>
-                        <RnIcon name="cart-outline" size={30} color="black"/>
+                        <RnIcon name="cart-outline" size={25} color="black"/>
                         <Text>Bag</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={{flex:1, justifyContent:'center',alignItems:'center',}}>
-                        <RnIcon name="person-outline" size={30} color="black"/>
+                        <RnIcon name="person-outline" size={25} color="black"/>
                         <Text>Account</Text>
                     </TouchableOpacity>
                 </View>
