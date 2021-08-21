@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { View, Text, TouchableOpacity, ScrollView,Image} from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView,Image,StyleSheet,AppRegistry} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import RnIcon from 'react-native-vector-icons/Ionicons';
+import Swiper from 'react-native-swiper'
 
 import Login from './AppShy/Login'
 import ListItem from './AppShy/ListItem'
@@ -11,30 +12,72 @@ import Wishlist from './AppShy/Wishlist'
 import YourBag from './AppShy/YourBag'
 import Product from './AppShy/Product'
 
+
+const styles = StyleSheet.create({
+  wrapper: {
+    height:500,
+    marginBottom:10
+  },
+  slide1: {
+      flex: 1,
+      alignItems: 'center',
+  },
+  slide2: {
+      flex: 1,
+      alignItems: 'center',
+  },
+  slide3: {
+      flex: 1,
+      alignItems: 'center',
+  },
+})
+
 const Home = ({ navigation }) => {
   return (
     <View style={{flex: 1}}>
       <ScrollView style={{flex: 1}}>
-        <TouchableOpacity  onPress={() => {navigation.navigate('Product');}} style={{flex:1, justifyContent:'center',alignItems:'center',}}>
-          <Image
-            style={{ height: 300, width: '98%', justifyContent:'center',alignItems:'center',marginHorizontal:5}}
-            source={{ uri: 'https://i.pinimg.com/originals/a3/0a/49/a30a49923011bc6e59a5ca802d61f894.png' }}
-          />
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => {
-          navigation.navigate('Product');}} style={{flex:1, justifyContent:'center',alignItems:'center',}}>
-          <Image
-            style={{ height: 300, width: '98%', justifyContent:'center',alignItems:'center',marginVertical:5}}
-            source={{ uri: 'https://1.bp.blogspot.com/-xmLV-ndC7M8/XszBqHMA_xI/AAAAAAAAmJA/53uO3K3Y9okVlMBsfqnQeFVp0DpxqcreQCLcBGAsYHQ/s1600/Anh-gai-xinh-deo-kinh%2B%252818%2529.jpg' }}
-          />
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => {
-          navigation.navigate('Product');}} style={{flex:1, justifyContent:'center',alignItems:'center',}}>
-          <Image
-            style={{ height: 300, width: '98%', justifyContent:'center',alignItems:'center',marginHorizontal:5}}
-            source={{ uri: 'https://pixwares.com/wp-content/uploads/2021/01/anh-gai-xinh.jpg' }}
-          />
-        </TouchableOpacity>
+        <Swiper style={styles.wrapper} showsButtons={false}>
+          <View style={styles.slide1}>
+            <Image
+              style={{ height: 500, width: '100%' }}
+              source={{ uri: 'https://i.pinimg.com/originals/a3/0a/49/a30a49923011bc6e59a5ca802d61f894.png' }}
+            />
+          </View>
+          <View style={styles.slide2}>
+            <Image
+              style={{ height: 500, width: '100%' }}
+              source={{ uri: 'https://chiase24.com/wp-content/uploads/2019/07/T%E1%BB%95ng-h%E1%BB%A3p-h%C3%ACnh-%E1%BA%A3nh-g%C3%A1i-xinh-d%E1%BB%85-th%C6%B0%C6%A1ng-cute-nh%E1%BA%A5t-6.jpg' }}
+            />
+          </View>
+          <View style={styles.slide3}>
+            <Image
+              style={{ height: 500, width: '100%' }}
+              source={{ uri: 'https://4.bp.blogspot.com/-HvIZc4sB4TY/WHY7uf6gqSI/AAAAAAAAkSQ/sOb-EGjJvYk__oVCJbcgTveDsWmYXzXqACLcB/s1600/13501626_1595750880473366_7747698304741635823_n.jpg' }}
+            />
+          </View>
+        </Swiper>
+        <View style={{flexDirection:'row'}}>
+          <TouchableOpacity  onPress={() => {navigation.navigate('Product');}} style={{flex:1, justifyContent:'center',alignItems:'center',}}>
+            <Image
+              style={{ height: 130, width: '90%', justifyContent:'center',alignItems:'center',marginHorizontal:5}}
+              source={{ uri: 'https://i.pinimg.com/originals/a3/0a/49/a30a49923011bc6e59a5ca802d61f894.png' }}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => {
+            navigation.navigate('Product');}} style={{flex:1, justifyContent:'center',alignItems:'center',}}>
+            <Image
+              style={{ height: 130, width: '90%', justifyContent:'center',alignItems:'center',marginHorizontal:5}}
+              source={{ uri: 'https://chiase24.com/wp-content/uploads/2019/07/T%E1%BB%95ng-h%E1%BB%A3p-h%C3%ACnh-%E1%BA%A3nh-g%C3%A1i-xinh-d%E1%BB%85-th%C6%B0%C6%A1ng-cute-nh%E1%BA%A5t-6.jpg' }}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => {
+            navigation.navigate('Product');}} style={{flex:1, justifyContent:'center',alignItems:'center',}}>
+            <Image
+              style={{ height: 130, width: '90%', justifyContent:'center',alignItems:'center',marginVertical:5}}
+              source={{ uri: 'https://4.bp.blogspot.com/-HvIZc4sB4TY/WHY7uf6gqSI/AAAAAAAAkSQ/sOb-EGjJvYk__oVCJbcgTveDsWmYXzXqACLcB/s1600/13501626_1595750880473366_7747698304741635823_n.jpg' }}
+            />
+          </TouchableOpacity>
+        </View>
       </ScrollView>
       <View style={{height:60,flexDirection:'row', justifyContent:'center',alignItems:'center'}}>
         <TouchableOpacity 
@@ -93,4 +136,5 @@ function App() {
     </NavigationContainer>
   )
 }
+AppRegistry.registerComponent('myproject', () => SwiperComponent)
 export default App;

@@ -3,6 +3,7 @@ import { View, Text, Image, TouchableOpacity, StyleSheet, AppRegistry ,ScrollVie
 import Swiper from 'react-native-swiper'
 import RnIcon from 'react-native-vector-icons/Ionicons';
 
+
 const styles = StyleSheet.create({
     wrapper: {
 
