@@ -86,48 +86,7 @@ export default function Demo({ navigation }) {
 					/>
 				</View>
 			</SafeAreaView>
-			<View style={{ height: 60, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', }}>
-				<TouchableOpacity
-					onPress={() => {
-						navigation.navigate('Home');
-					}}
-					style={{ flex: 1, justifyContent: 'center', alignItems: 'center', }}>
-					<RnIcon name="home-outline" size={25} color="black" />
-					<Text>Home</Text>
-				</TouchableOpacity>
-				<TouchableOpacity
-					onPress={() => {
-						navigation.navigate('Product List');
-					}}
-					style={{ flex: 1, justifyContent: 'center', alignItems: 'center', }}>
-					<RnIcon name="list-outline" size={25} color="black" />
-					<Text>Shop</Text>
-				</TouchableOpacity>
-				<TouchableOpacity
-					onPress={() => {
-						navigation.navigate('WishList');
-					}}
-					style={{ flex: 1, justifyContent: 'center', alignItems: 'center', }}>
-					<RnIcon name="heart-outline" size={25} color="black" />
-					<Text>Wishlist</Text>
-				</TouchableOpacity>
-				<TouchableOpacity
-					onPress={() => {
-						navigation.navigate('Your Bag');
-					}}
-					style={{ flex: 1, justifyContent: 'center', alignItems: 'center', }}>
-					<RnIcon name="cart-outline" size={25} color="black" />
-					<Text>Bag</Text>
-				</TouchableOpacity>
-				<TouchableOpacity
-					onPress={() => {
-						navigation.navigate('Login');
-					}}
-					style={{ flex: 1, justifyContent: 'center', alignItems: 'center', }}>
-					<RnIcon name="person-outline" size={25} color="black" />
-					<Text>Account</Text>
-				</TouchableOpacity>
-			</View>
+			
 		</View>
 	)
 }
