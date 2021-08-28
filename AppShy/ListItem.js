@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { View, Text, FlatList, StyleSheet, StatusBar, TouchableOpacity, SafeAreaView, Image, Dimensions, ScrollView } from 'react-native'
 import RnIcon from 'react-native-vector-icons/Ionicons';
+import axios from 'axios'
+import { getImage } from './utils/index'
+
+import { getProductList } from './services/Api'
 
 const DATA = [
 	{
@@ -32,6 +36,27 @@ const DATA = [
 
 export default function Demo({ navigation }) {
 
+	const [product, setProduct] = useState([])
+	// const dispatch = useDispatch();
+	// const product = useSelector((store) => store.productReducer.products);
+
+	useEffect(() => {
+		// dispatch(getProduct({ page: 1, limit: 10 }));
+		// getProductList()
+		const callGetProductList = async () => {
+			try {
+				const response = await getProductList();
+				console.log('rs', response.data.data); // data tu api tra ve
+				setProduct(response.data.data)
+
+			} catch (error) {
+				console.error(error);
+			}
+		}
+
+		callGetProductList()
+	}, [])
+
 	const { height, width } = Dimensions.get('window');
 	const itemWidth = (width - 15) / 2;
 
@@ -40,7 +65,7 @@ export default function Demo({ navigation }) {
 			<View>
 				<Image
 					style={{ height: 350, width: '100%' }}
-					source={{ uri: item.Image }}
+					source={{  uri: getImage(item.images[0])  }}
 				/>
 				<View style={{ position: 'absolute', top: 10, right: 10, fontSize: 18, backgroundColor: 'white', height: 50, width: 50, borderRadius: 50 / 2, justifyContent: 'center', alignItems: 'center', }}>
 					<RnIcon name="heart-outline" size={30} color="black" />
@@ -79,9 +104,9 @@ export default function Demo({ navigation }) {
 				<View>
 					<FlatList
 						style={{ marginTop: 10 }}
-						data={DATA}
+						data={product}
 						renderItem={renderItem}
-						keyExtractor={item => item.id}
+						keyExtractor={item => item._id?.toString()}
 						numColumns={2}
 					/>
 				</View>

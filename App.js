@@ -1,10 +1,13 @@
 import * as React from 'react';
+
 import { View, Text, TouchableOpacity, ScrollView, Image, StyleSheet, AppRegistry } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import RnIcon from 'react-native-vector-icons/Ionicons';
-import Swiper from 'react-native-swiper'
+import Swiper from 'react-native-swiper';
+
+var ScrollableTabView = require('react-native-scrollable-tab-view');
 
 import Login from './AppShy/Login'
 import ListItem from './AppShy/ListItem'
@@ -12,6 +15,9 @@ import Item from './AppShy/Item'
 import Wishlist from './AppShy/Wishlist'
 import YourBag from './AppShy/YourBag'
 import Product from './AppShy/Product'
+
+
+
 
 
 const styles = StyleSheet.create({
@@ -121,6 +127,7 @@ function App() {
           },
         tabBarActiveTintColor: 'orange',
         tabBarInactiveTintColor: 'gray',
+        
         })}
       >
       <Tap.Screen name="Home" component={Home} />
