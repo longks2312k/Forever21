@@ -7,7 +7,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import RnIcon from 'react-native-vector-icons/Ionicons';
 import Swiper from 'react-native-swiper';
 
-var ScrollableTabView = require('react-native-scrollable-tab-view');
 
 import Login from './AppShy/Login'
 import ListItem from './AppShy/ListItem'
@@ -102,6 +101,7 @@ function App() {
   return (
     <NavigationContainer>
       <Tap.Navigator
+        initialRouteName='Login'
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;

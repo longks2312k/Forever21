@@ -6,33 +6,6 @@ import { getImage } from './utils/index'
 
 import { getProductList } from './services/Api'
 
-const DATA = [
-	{
-		id: '1',
-		Image: 'https://thuthuatnhanh.com/wp-content/uploads/2019/05/gai-xinh-toc-ngan-facebook.jpg'
-	},
-	{
-		id: '2',
-		Image: 'https://pixwares.com/wp-content/uploads/2021/01/anh-gai-xinh.jpg'
-	},
-	{
-		id: '3',
-		Image: 'https://chiase24.com/wp-content/uploads/2019/07/T%E1%BB%95ng-h%E1%BB%A3p-h%C3%ACnh-%E1%BA%A3nh-g%C3%A1i-xinh-d%E1%BB%85-th%C6%B0%C6%A1ng-cute-nh%E1%BA%A5t-6.jpg'
-	},
-	{
-		id: '4',
-		Image: 'https://4.bp.blogspot.com/-HvIZc4sB4TY/WHY7uf6gqSI/AAAAAAAAkSQ/sOb-EGjJvYk__oVCJbcgTveDsWmYXzXqACLcB/s1600/13501626_1595750880473366_7747698304741635823_n.jpg'
-	},
-	{
-		id: '5',
-		Image: 'https://1.bp.blogspot.com/-xmLV-ndC7M8/XszBqHMA_xI/AAAAAAAAmJA/53uO3K3Y9okVlMBsfqnQeFVp0DpxqcreQCLcBGAsYHQ/s1600/Anh-gai-xinh-deo-kinh%2B%252818%2529.jpg'
-	},
-	{
-		id: '6',
-		Image: 'https://i.pinimg.com/originals/a3/0a/49/a30a49923011bc6e59a5ca802d61f894.png'
-	},
-
-];
 
 export default function Demo({ navigation }) {
 
